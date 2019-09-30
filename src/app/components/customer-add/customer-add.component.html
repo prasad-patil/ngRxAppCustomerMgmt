@@ -1,0 +1,22 @@
+<div class="container">
+  <h4>Add customer</h4>
+  <form class="customer-form" #f="ngForm" (submit)="onSubmit(f.value)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        [(ngModel)]="customer.name"
+        name="name"
+        id="name"
+        aria-describedby="nameHelp"
+        placeholder="Customer Name"
+        class="form-control"
+      />
+      <small id="nameHelp" class="form-text text-muted"
+        >Add customer name here.</small
+      >
+    </div>
+
+    <button class="btn btn-primary submit-btn" type="submit">Add</button>
+  </form>
+</div>
